@@ -19,6 +19,7 @@ while True:
     user_guesses = input('Make a guess: ')
     guesses += 1
     print(user_guesses)
+
     if user_guesses.isdigit():
         user_guesses = int(user_guesses)
     else:
@@ -28,6 +29,8 @@ while True:
     if user_guesses == random_number:
         print('Correct!')
         break
+    elif user_guesses not in [0, top_of_range]:
+        print('Uou are not in quiz range!')
     elif user_guesses > random_number:
         print('You were above the number!')
     else:
